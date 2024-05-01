@@ -1,0 +1,15 @@
+// Q: Where is the user LED?
+// A: It's on Port A, pin 5 [PA5]
+
+#define PERIPH_BASE				0x40000000UL
+#define AHB1_PERIPH_OFFSET		0x00020000UL
+#define AHB1_PERIPH_BASE		(PERIPH_BASE + AHB1_PERIPH_OFFSET)
+
+
+#include
+
+int main(void)
+{
+    /* Loop forever */
+	for(;;);
+}
