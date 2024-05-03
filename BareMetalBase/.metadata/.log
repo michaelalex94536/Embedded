@@ -845,3 +845,18 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY org.eclipse.cdt.core 1 0 2024-05-03 11:13:39.925
 !MESSAGE Indexed '5_uart_tx' (3 sources, 7 headers) in 1.18 sec: 780 declarations; 944 references; 13 unresolved inclusions; 29 syntax errors; 612 unresolved names (26%)
+!SESSION 2024-05-03 15:18:49.031 -----------------------------------------------
+eclipse.buildId=Version 1.12.1
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-05-03 15:18:55.014
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-05-03 15:18:55.016
+!MESSAGE Log4j2 initialized with config file /home/michael/Documents/Udemy/Embedded/BareMetalBase/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-05-03 15:18:59.797
+!MESSAGE Started RMI Server, listening on port 41337
