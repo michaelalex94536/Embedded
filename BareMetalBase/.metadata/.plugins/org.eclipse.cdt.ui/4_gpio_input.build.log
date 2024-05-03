@@ -1,0 +1,17 @@
+14:56:46 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Include -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "4_gpio_input.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/michael/Documents/Udemy/Embedded/BareMetalBase/4_gpio_input/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="4_gpio_input.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 4_gpio_input.elf
+ 
+arm-none-eabi-size   4_gpio_input.elf 
+arm-none-eabi-objdump -h -S  4_gpio_input.elf  > "4_gpio_input.list"
+   text	   data	    bss	    dec	    hex	filename
+    760	      8	   1568	   2336	    920	4_gpio_input.elf
+Finished building: default.size.stdout
+ 
+Finished building: 4_gpio_input.list
+ 
+
+14:56:47 Build Finished. 0 errors, 0 warnings. (took 1s.281ms)
+

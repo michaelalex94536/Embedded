@@ -1,4 +1,13 @@
+content_assist_autoactivation_trigger_arrow=false
+content_assist_autoactivation_trigger_dot=false
+content_assist_autoactivation_trigger_doublecolon=false
+content_assist_autoactivation_trigger_replace_dot_with_arrow=false
+content_assist_autoinsert=false
+content_assist_category_order=org.eclipse.cdt.ui.templateProposalCategory\:0\u0000org.eclipse.cdt.ui.parserProposalCategory\:1\u0000org.eclipse.cdt.ui.helpProposalCategory\:2\u0000org.eclipse.cdt.ui.textProposalCategory\:65538\u0000
+content_assist_prefix_completion=false
+content_assist_proposals_timeout=5000
 eclipse.preferences.version=1
+sourceHoverBackgroundColor=255,255,255
 spelling_locale_initialized=true
 useAnnotationsPrefPage=true
 useQuickDiffPrefPage=true
