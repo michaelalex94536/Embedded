@@ -9,16 +9,6 @@
 #define GPIOAEN				(1U << 0)
 #define UART2EN 			(1U << 17)
 
-#define SYS_FREQ			16000000
-#define APB1_CLK			SYS_FREQ
-#define BAUD_RATE			115200
-
-#define CR1_TE				(1U << 3)
-#define CR1_UE				(1U << 13)
-
-static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t BaudRate);
-static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t BaudRate);
-
 int main(void)
 {
 
@@ -51,23 +41,11 @@ void uart2_tx_init(void)
 	RCC->APB1ENR |= UART2EN;
 
 	// Configure baudrate
-	uart_set_baudrate(USART2, APB1_CLK, BAUD_RATE);
-
-	// Configure transfer direction and register defaults as well (8 data bits, 1 stop bit, parity 0...)
-	USART2->CR1 = CR1_TE;
-
+	// Configure transfer direction
 	// Enable UART module
-	USART2->CR1 = CR1_UE;
-
 }
 
-static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t BaudRate)
-{
-	USARTx->BRR = compute_uart_bd(PeriphClk, BaudRate);
+static compute_uart_div(uint32_t)
+		{
 
-}
-
-static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t BaudRate)
-{
-	return ((PeriphClk + (BaudRate/2U))/BaudRate);
-}
+		}

@@ -1,0 +1,39 @@
+/*
+ * The user pushbutton is connected to PC13 - Port C, pin 13
+ *
+ * The button pin is pulled high, which means it is "active low."
+ */
+
+#include "stm32f4xx.h"
+
+#define GPIOAEN				(1U << 0)
+#define UART2EN 			(1U << 17)
+
+int main(void)
+{
+
+
+	while(1)
+	{
+
+	}
+}
+
+// UART2 Tx is pin PA2 set to AF07 mode
+void uart2_tx_init(void)
+{
+	/******************* Configure UART GPIO pin ***********************/
+	// Enable clock access to GPIOA on AHB1
+	RCC->AHB1ENR |= GPIOAEN;
+	// Set PA2 to alternate function mode
+	// Set PA2 AF mode type to UART_TX (AF07)
+
+	/******************* Configure UART module ***********************/
+	// Configure clock access to UART2
+	RCC->APB1ENR |= UART2EN;
+
+	// Configure baudrate
+	// Configure transfer direction
+	// Enable UART module
+
+}
