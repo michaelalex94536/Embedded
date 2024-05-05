@@ -1,0 +1,8 @@
+"./Src/adc_dma.o"
+"./Src/dma.o"
+"./Src/main.o"
+"./Src/syscalls.o"
+"./Src/sysmem.o"
+"./Src/uart.o"
+"./Src/uart_dma.o"
+"./Startup/startup_stm32f446retx.o"

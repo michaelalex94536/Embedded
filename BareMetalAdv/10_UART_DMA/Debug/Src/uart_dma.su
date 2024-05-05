@@ -1,0 +1,2 @@
+../Src/uart_dma.c:10:6:uart2_rx_tx_init	4	static
+../Src/uart_dma.c:30:6:dma1_init	4	static
