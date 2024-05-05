@@ -1,1 +1,5 @@
-Embedded contains assorted STM32 projects
+The "Embedded" repo contains assorted STM32 projects
+
+The BareMetalBase sub-repo contains projects created while taking the Udemy class "Embedded Systems Bare-Metal Programming From the Ground Up".  These projects used the STM32 Nucleo-F411RE board, which costs less than US $14 at DigiKey - what a great deal.  "Bare-metal" means the course doesn't use the massive STM32 HAL (hardware abstraction layer) or LL (lower level) APIs.  Using the device reference manual, data sheet, and the Nucleo board user manual, you program the device at the register level, bit-by-bit.  It's tedious at times, but this is the best way to learn embedded programming; nothing is hidden or abstracted away in an API or library.  
+
+The BareMetalAdv sub-repo has projects created while taking the Udemy class "Embedded Systems Advanced Bare-Metal Programming".  These projects used the STM32 Nucleo-F446RE board.  "Bare-metal" means the course doesn't use the massive STM32 HAL (hardware abstraction layer) or LL (lower level) APIs. Using the device reference manual, data sheet, and the Nucleo board user manual, you program the device at the register level, bit-by-bit.  It's tedious at times, but this is the best way to learn embedded programming; nothing is hidden or abstracted away in an API or library. 
