@@ -1,9 +1,4 @@
-/*
- * The user pushbutton is connected to PC13 - Port C, pin 13
- *
- * The button pin is pulled high, which means it is "active low."
- */
-
+#include <stdint.h>
 #include "stm32f4xx.h"
 
 #define GPIOAEN				(1U << 0)
@@ -16,16 +11,21 @@
 #define CR1_TE				(1U << 3)
 #define CR1_UE				(1U << 13)
 
+#define SR_TXE				(1U << 7)
+
 static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t BaudRate);
 static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t BaudRate);
 
+void uart2_tx_init(void);
+void uart2_write(int ch);
+
 int main(void)
 {
-
+	uart2_tx_init();
 
 	while(1)
 	{
-
+		uart2_write('Y');
 	}
 }
 
@@ -57,9 +57,21 @@ void uart2_tx_init(void)
 	USART2->CR1 = CR1_TE;
 
 	// Enable UART module
-	USART2->CR1 = CR1_UE;
+	USART2->CR1 |= CR1_UE;
 
 }
+
+void uart2_write(int ch)
+{
+	// Make sure the transmit data register is empty: check the USART status register TXE bit
+	while(!(USART2->SR & SR_TXE)){}
+
+	// Write to the transmit data register
+	USART2->DR |= (ch & 0xFF);
+
+}
+
+
 
 static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t BaudRate)
 {

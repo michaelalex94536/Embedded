@@ -1,191 +1,31 @@
-15:52:38 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+18:12:30 **** Build of configuration Debug for project 5_uart_tx ****
 make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411retx.d" -MT"Startup/startup_stm32f411retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f411retx.o" "../Startup/startup_stm32f411retx.s"
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Include -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Include -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Include -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
 arm-none-eabi-gcc -o "5_uart_tx.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/michael/Documents/Udemy/Embedded/BareMetalBase/5_uart_tx/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_uart_tx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: 5_uart_tx.elf
  
 arm-none-eabi-size   5_uart_tx.elf 
 arm-none-eabi-objdump -h -S  5_uart_tx.elf  > "5_uart_tx.list"
    text	   data	    bss	    dec	    hex	filename
-    660	      8	   1568	   2236	    8bc	5_uart_tx.elf
+    948	      8	   1568	   2524	    9dc	5_uart_tx.elf
 Finished building: default.size.stdout
  
 Finished building: 5_uart_tx.list
  
-15:54:17 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+18:13:40 **** Incremental Build of configuration Debug for project 5_uart_tx ****
 make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Include -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c:48:8: warning: return type defaults to 'int' [-Wimplicit-int]
-   48 | static compute_uart_div(Uint32_t)
-      |        ^~~~~~~~~~~~~~~~
-../Src/main.c: In function 'compute_uart_div':
-../Src/main.c:48:8: warning: type of 'Uint32_t' defaults to 'int' [-Wimplicit-int]
-../Src/main.c:51:3: warning: control reaches end of non-void function [-Wreturn-type]
-   51 |   }
-      |   ^
-At top level:
-../Src/main.c:48:8: warning: 'compute_uart_div' defined but not used [-Wunused-function]
-   48 | static compute_uart_div(Uint32_t)
-      |        ^~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "5_uart_tx.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/michael/Documents/Udemy/Embedded/BareMetalBase/5_uart_tx/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_uart_tx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 5_uart_tx.elf
- 
 arm-none-eabi-size   5_uart_tx.elf 
-arm-none-eabi-objdump -h -S  5_uart_tx.elf  > "5_uart_tx.list"
    text	   data	    bss	    dec	    hex	filename
-    660	      8	   1568	   2236	    8bc	5_uart_tx.elf
+    948	      8	   1568	   2524	    9dc	5_uart_tx.elf
 Finished building: default.size.stdout
  
-Finished building: 5_uart_tx.list
- 
-15:54:30 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+18:16:02 **** Incremental Build of configuration Debug for project 5_uart_tx ****
 make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Include -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c:48:8: warning: return type defaults to 'int' [-Wimplicit-int]
-   48 | static compute_uart_div(uint32_t)
-      |        ^~~~~~~~~~~~~~~~
-../Src/main.c: In function 'compute_uart_div':
-../Src/main.c:48:25: error: parameter name omitted
-   48 | static compute_uart_div(uint32_t)
-      |                         ^~~~~~~~
-../Src/main.c:51:3: warning: control reaches end of non-void function [-Wreturn-type]
-   51 |   }
-      |   ^
-At top level:
-../Src/main.c:48:8: warning: 'compute_uart_div' defined but not used [-Wunused-function]
-   48 | static compute_uart_div(uint32_t)
-      |        ^~~~~~~~~~~~~~~~
-make: *** [Src/subdir.mk:25: Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-15:55:01 **** Incremental Build of configuration Debug for project 5_uart_tx ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Include -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c:48:8: warning: return type defaults to 'int' [-Wimplicit-int]
-   48 | static compute_uart_div(Uint32_t)
-      |        ^~~~~~~~~~~~~~~~
-../Src/main.c: In function 'compute_uart_div':
-../Src/main.c:48:8: warning: type of 'Uint32_t' defaults to 'int' [-Wimplicit-int]
-../Src/main.c:51:3: warning: control reaches end of non-void function [-Wreturn-type]
-   51 |   }
-      |   ^
-At top level:
-../Src/main.c:48:8: warning: 'compute_uart_div' defined but not used [-Wunused-function]
-   48 | static compute_uart_div(Uint32_t)
-      |        ^~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "5_uart_tx.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/michael/Documents/Udemy/Embedded/BareMetalBase/5_uart_tx/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_uart_tx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 5_uart_tx.elf
- 
 arm-none-eabi-size   5_uart_tx.elf 
-arm-none-eabi-objdump -h -S  5_uart_tx.elf  > "5_uart_tx.list"
    text	   data	    bss	    dec	    hex	filename
-    660	      8	   1568	   2236	    8bc	5_uart_tx.elf
+    948	      8	   1568	   2524	    9dc	5_uart_tx.elf
 Finished building: default.size.stdout
- 
-Finished building: 5_uart_tx.list
- 
-15:56:22 **** Incremental Build of configuration Debug for project 5_uart_tx ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Include -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c: In function 'compute_uart_div':
-../Src/main.c:51:3: warning: no return statement in function returning non-void [-Wreturn-type]
-   51 |   }
-      |   ^
-At top level:
-../Src/main.c:48:17: warning: 'compute_uart_div' defined but not used [-Wunused-function]
-   48 | static uint16_t compute_uart_div(uint32_t PeriphClk, uint32_t BaudRate)
-      |                 ^~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "5_uart_tx.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/michael/Documents/Udemy/Embedded/BareMetalBase/5_uart_tx/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_uart_tx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 5_uart_tx.elf
- 
-arm-none-eabi-size   5_uart_tx.elf 
-arm-none-eabi-objdump -h -S  5_uart_tx.elf  > "5_uart_tx.list"
-   text	   data	    bss	    dec	    hex	filename
-    660	      8	   1568	   2236	    8bc	5_uart_tx.elf
-Finished building: default.size.stdout
- 
-Finished building: 5_uart_tx.list
- 
-15:58:33 **** Incremental Build of configuration Debug for project 5_uart_tx ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Include -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c:48:17: warning: 'compute_uart_div' defined but not used [-Wunused-function]
-   48 | static uint16_t compute_uart_div(uint32_t PeriphClk, uint32_t BaudRate)
-      |                 ^~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "5_uart_tx.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/michael/Documents/Udemy/Embedded/BareMetalBase/5_uart_tx/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_uart_tx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 5_uart_tx.elf
- 
-arm-none-eabi-size   5_uart_tx.elf 
-arm-none-eabi-objdump -h -S  5_uart_tx.elf  > "5_uart_tx.list"
-   text	   data	    bss	    dec	    hex	filename
-    660	      8	   1568	   2236	    8bc	5_uart_tx.elf
-Finished building: default.size.stdout
- 
-Finished building: 5_uart_tx.list
- 
-16:03:42 **** Incremental Build of configuration Debug for project 5_uart_tx ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Include -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c: In function 'uart_set_baudrate':
-../Src/main.c:50:16: warning: implicit declaration of function 'compute_uart_bd' [-Wimplicit-function-declaration]
-   50 |  USARTx->BRR = compute_uart_bd(PeriphClk, BaudRate);
-      |                ^~~~~~~~~~~~~~~
-../Src/main.c: At top level:
-../Src/main.c:54:17: error: conflicting types for 'compute_uart_bd'
-   54 | static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t BaudRate)
-      |                 ^~~~~~~~~~~~~~~
-../Src/main.c:50:16: note: previous implicit declaration of 'compute_uart_bd' was here
-   50 |  USARTx->BRR = compute_uart_bd(PeriphClk, BaudRate);
-      |                ^~~~~~~~~~~~~~~
-../Src/main.c:54:17: warning: 'compute_uart_bd' defined but not used [-Wunused-function]
-   54 | static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t BaudRate)
-      |                 ^~~~~~~~~~~~~~~
-../Src/main.c:48:13: warning: 'uart_set_baudrate' defined but not used [-Wunused-function]
-   48 | static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t BaudRate)
-      |             ^~~~~~~~~~~~~~~~~
-make: *** [Src/subdir.mk:25: Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-16:05:45 **** Incremental Build of configuration Debug for project 5_uart_tx ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Include -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c:51:13: warning: 'uart_set_baudrate' defined but not used [-Wunused-function]
-   51 | static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t BaudRate)
-      |             ^~~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "5_uart_tx.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/michael/Documents/Udemy/Embedded/BareMetalBase/5_uart_tx/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_uart_tx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 5_uart_tx.elf
- 
-arm-none-eabi-size   5_uart_tx.elf 
-arm-none-eabi-objdump -h -S  5_uart_tx.elf  > "5_uart_tx.list"
-   text	   data	    bss	    dec	    hex	filename
-    660	      8	   1568	   2236	    8bc	5_uart_tx.elf
-Finished building: default.size.stdout
- 
-Finished building: 5_uart_tx.list
- 
-16:07:23 **** Incremental Build of configuration Debug for project 5_uart_tx ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Include -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "5_uart_tx.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/michael/Documents/Udemy/Embedded/BareMetalBase/5_uart_tx/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_uart_tx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 5_uart_tx.elf
- 
-arm-none-eabi-size   5_uart_tx.elf 
-arm-none-eabi-objdump -h -S  5_uart_tx.elf  > "5_uart_tx.list"
-   text	   data	    bss	    dec	    hex	filename
-    660	      8	   1568	   2236	    8bc	5_uart_tx.elf
-Finished building: default.size.stdout
- 
-Finished building: 5_uart_tx.list
- 
-16:10:24 **** Incremental Build of configuration Debug for project 5_uart_tx ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Include -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "5_uart_tx.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/michael/Documents/Udemy/Embedded/BareMetalBase/5_uart_tx/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_uart_tx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 5_uart_tx.elf
- 
-arm-none-eabi-size   5_uart_tx.elf 
-arm-none-eabi-objdump -h -S  5_uart_tx.elf  > "5_uart_tx.list"
-   text	   data	    bss	    dec	    hex	filename
-    660	      8	   1568	   2236	    8bc	5_uart_tx.elf
-Finished building: default.size.stdout
- 
-Finished building: 5_uart_tx.list
  
