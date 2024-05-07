@@ -5,3 +5,6 @@
 1715110583502	Rename resource '6_uart_printf_tx'
 1715111671371	Delete 3 resources
 1715111685168	Delete resource '7_uart_modular/Debug'
+1715115147785	Delete resource '7_uart_modular/7_uart_modular.launch'
+1715115921953	Delete resource '8_uart_rx/Debug'
+1715115929580	Delete resource '8_uart_rx/7_uart_modular.launch'
