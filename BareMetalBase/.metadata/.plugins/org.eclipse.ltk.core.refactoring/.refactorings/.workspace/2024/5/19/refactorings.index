@@ -1,2 +1,5 @@
 1714871534107	Delete resource '5_uart_tx/Debug'
 1714871542033	Delete resource '5_uart_tx/5_uart_tx Debug.launch'
+1715110538723	Rename resource '6_uart_printf'
+1715110562414	Rename resource '5_uart_tx'
+1715110583502	Rename resource '6_uart_printf_tx'

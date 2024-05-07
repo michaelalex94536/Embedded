@@ -1,31 +1,36 @@
-18:12:30 **** Build of configuration Debug for project 5_uart_tx ****
+12:38:23 **** Clean-only build of configuration Debug for project 6_uart_printf ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32f411retx.d ./Startup/startup_stm32f411retx.o
+rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf 5_uart_tx.elf 5_uart_tx.list 5_uart_tx.map default.size.stdout
+ 
+12:38:29 **** Clean-only build of configuration Debug for project 6_uart_printf ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32f411retx.d ./Startup/startup_stm32f411retx.o
+rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf 5_uart_tx.elf 5_uart_tx.list 5_uart_tx.map default.size.stdout
+ 
+12:38:30 **** Build of configuration Debug for project 6_uart_printf ****
 make -j8 all 
 arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411retx.d" -MT"Startup/startup_stm32f411retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f411retx.o" "../Startup/startup_stm32f411retx.s"
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Include -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
 arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Include -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
 arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Include -I/home/michael/Documents/Udemy/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "5_uart_tx.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/michael/Documents/Udemy/Embedded/BareMetalBase/5_uart_tx/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_uart_tx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 5_uart_tx.elf
+arm-none-eabi-gcc -o "6_uart_printf.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/michael/Documents/Udemy/Embedded/BareMetalBase/6_uart_printf/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="6_uart_printf.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 6_uart_printf.elf
  
-arm-none-eabi-size   5_uart_tx.elf 
-arm-none-eabi-objdump -h -S  5_uart_tx.elf  > "5_uart_tx.list"
+arm-none-eabi-size   6_uart_printf.elf 
+arm-none-eabi-objdump -h -S  6_uart_printf.elf  > "6_uart_printf.list"
    text	   data	    bss	    dec	    hex	filename
-    948	      8	   1568	   2524	    9dc	5_uart_tx.elf
+   5532	    108	   1588	   7228	   1c3c	6_uart_printf.elf
 Finished building: default.size.stdout
  
-Finished building: 5_uart_tx.list
+Finished building: 6_uart_printf.list
  
-18:13:40 **** Incremental Build of configuration Debug for project 5_uart_tx ****
+12:38:37 **** Incremental Build of configuration Debug for project 6_uart_printf ****
 make -j8 all 
-arm-none-eabi-size   5_uart_tx.elf 
+arm-none-eabi-size   6_uart_printf.elf 
    text	   data	    bss	    dec	    hex	filename
-    948	      8	   1568	   2524	    9dc	5_uart_tx.elf
-Finished building: default.size.stdout
- 
-18:16:02 **** Incremental Build of configuration Debug for project 5_uart_tx ****
-make -j8 all 
-arm-none-eabi-size   5_uart_tx.elf 
-   text	   data	    bss	    dec	    hex	filename
-    948	      8	   1568	   2524	    9dc	5_uart_tx.elf
+   5532	    108	   1588	   7228	   1c3c	6_uart_printf.elf
 Finished building: default.size.stdout
  

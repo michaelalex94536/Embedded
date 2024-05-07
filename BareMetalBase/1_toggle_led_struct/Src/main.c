@@ -51,7 +51,7 @@ typedef struct
 // Check the "stm32f411xe.h" file for the full structure
 typedef struct
 {
-	volatile uint32_t DUMMY[12];		/*  Twelve (12) dummy registers to assure AHB1ENR memory location is correct    */
+	volatile uint32_t DUMMY[12];	/*  Twelve (12) dummy registers to assure AHB1ENR memory location is correct    */
 	volatile uint32_t AHB1ENR;		/*  AHB1ENR register, Address offset: 0x30   */
 
 }RCC_TypeDef;
