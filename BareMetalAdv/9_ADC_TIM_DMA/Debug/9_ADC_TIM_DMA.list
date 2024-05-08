@@ -265,7 +265,8 @@ void adc_tim_dma_init(void)
  800036e:	f023 7380 	bic.w	r3, r3, #16777216	; 0x1000000
  8000372:	6093      	str	r3, [r2, #8]
 
-	// Set ADC resolution using ADC_CR1 register bits 25:24. 0b00 = 12-bit, 0b10 = 8-bit
+	// Set ADC resolution using ADC_CR1 register bits 25:24.
+	// 0b00 = 12-bit resolution, 0b10 = 8-bit resolution.
 	ADC1->CR1 |= (1U << 25);
  8000374:	4b4a      	ldr	r3, [pc, #296]	; (80004a0 <adc_tim_dma_init+0x1b4>)
  8000376:	685b      	ldr	r3, [r3, #4]
@@ -357,7 +358,6 @@ void adc_tim_dma_init(void)
  80003fe:	4a29      	ldr	r2, [pc, #164]	; (80004a4 <adc_tim_dma_init+0x1b8>)
  8000400:	f043 0310 	orr.w	r3, r3, #16
  8000404:	6013      	str	r3, [r2, #0]
-
 
 	// Set peripheral address - ADC register
 	DMA2_Stream0->PAR = (uint32_t)(&(ADC1->DR));

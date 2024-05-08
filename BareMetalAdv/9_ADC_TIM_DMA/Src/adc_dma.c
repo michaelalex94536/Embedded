@@ -99,7 +99,6 @@ void adc_tim_dma_init(void)
 	// Enable transfer complete interrupt
 	DMA2_Stream0->CR |= DMA_SCR_TCIE;
 
-
 	// Set peripheral address - ADC register
 	DMA2_Stream0->PAR = (uint32_t)(&(ADC1->DR));
 

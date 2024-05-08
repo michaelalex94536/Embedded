@@ -17,7 +17,7 @@
 #define CR1_UE		(1U << 13)
 #define SR_TXE		(1U << 7) //Transmit data register is empty
 
-// Needed to set the USART baudrate
+// Needed to set the USART baudrate examples
 #define UART_BAUDRATE	115200
 #define CLK				16000000  // Default clock for this chip
 
@@ -50,7 +50,7 @@ void uart2_tx_init(void)
 	// 5) Set baudrate
 	uart_set_baudrate(CLK, UART_BAUDRATE);
 
-	// 6) Set transfer direction AND CLEAR ALL OTHER BITS IN THIS REGISTER!
+	// 6) Set transfer direction AND CLEAR ALL OTHER BITS INCR3_DMAT THIS REGISTER!
 	USART2->CR1 = CR1_TE;
 
 	// 7) Enable UART module, not changing any other bits (as usual)
@@ -66,7 +66,6 @@ static void uart2_write(int ch)
 
 	/* Write to transmit data register.  */
 	USART2->DR = (ch & 0xFF);
-
 }
 
 // Function to compute baudrate
