@@ -1,0 +1,36 @@
+/*
+ * adc.c
+ *
+ * For the F411, ADC1 is on APB2. To enable ADC1, set bit 8 of
+ * the RCC_APB2ENR register
+ *
+ * And ADC1 Channel 1 is connected to Pin A1 of GPIOA (Table 8 on page 51 of the datasheet)
+ *
+ *  Created on: May 9, 2024
+ *      Author: michael
+ */
+
+#include "adc.h"
+
+#define ADC1EN			(1U << 8)
+#define GPIOAEN			(1U << 0)
+
+
+
+void adc1_pa1_init(void)
+{
+	/************    Configure the ADC GPIOA pin    ***************/
+	// Enable clock access to GPIOA
+	RCC->AHB1ENR |= GPIOAEN;
+
+	// Set the mode of PA1 to analog mode - bits 3:2 -> 0b11
+	GPIOA->MODER |= (1U << 3);
+	GPIOA->MODER |= (1U << 2);
+
+
+	/************    Configure the ADC peripheral    ***************/
+	// Enable clock access to ADC
+	RCC->APB1ENR |= ADC1EN;
+
+	// Configure the ADC parameters
+}

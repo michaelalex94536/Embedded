@@ -1,0 +1,28 @@
+/*
+ * This program will only work correctly if the mouse cursor is in
+ * terminal window!
+ */
+
+#include <stdint.h>
+#include <stdio.h>
+#include "stm32f4xx.h"
+
+#include "uart.h"
+#include "adc.h"
+
+
+
+int main(void)
+{
+
+	uart2_tx_init();
+
+	adc1_pa1_init();
+
+	start_conversion();
+
+	while(1)
+	{
+
+	}
+}

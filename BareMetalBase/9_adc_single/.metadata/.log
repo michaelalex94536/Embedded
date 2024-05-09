@@ -1,0 +1,54 @@
+!SESSION 2024-05-08 17:44:35.147 -----------------------------------------------
+eclipse.buildId=Version 1.12.1
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/michael/Embedded/BareMetalBase/8_uart_rx -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-05-08 17:44:40.721
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-05-08 17:44:40.723
+!MESSAGE Log4j2 initialized with config file /home/michael/Embedded/BareMetalBase/8_uart_rx/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-05-08 17:44:43.475
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-08 17:45:48.597
+!MESSAGE Indexed '0_toggle_led' (3 sources, 53 headers) in 0.894 sec: 1,950 declarations; 2,862 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-08 17:45:50.371
+!MESSAGE Indexed '1_toggle_led_struct' (3 sources, 0 headers) in 0.044 sec: 77 declarations; 93 references; 11 unresolved inclusions; 0 syntax errors; 36 unresolved names (17%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-08 17:45:53.521
+!MESSAGE Indexed '3_gpio_bsrr' (3 sources, 53 headers) in 0.585 sec: 1,951 declarations; 2,837 references; 1 unresolved inclusions; 1 syntax errors; 12 unresolved names (0.25%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-08 17:46:04.340
+!MESSAGE Indexed '2_gpio_output' (3 sources, 53 headers) in 0.547 sec: 1,950 declarations; 2,835 references; 1 unresolved inclusions; 1 syntax errors; 10 unresolved names (0.21%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-08 17:46:06.780
+!MESSAGE Indexed '5_uart_tx' (3 sources, 53 headers) in 0.357 sec: 1,971 declarations; 2,859 references; 1 unresolved inclusions; 1 syntax errors; 30 unresolved names (0.62%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-08 17:46:09.336
+!MESSAGE Indexed '7_uart_modular' (4 sources, 57 headers) in 0.364 sec: 2,125 declarations; 2,999 references; 2 unresolved inclusions; 1 syntax errors; 30 unresolved names (0.58%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-08 17:46:11.987
+!MESSAGE Indexed '6_uart_printf' (3 sources, 55 headers) in 0.217 sec: 2,121 declarations; 2,997 references; 1 unresolved inclusions; 1 syntax errors; 30 unresolved names (0.58%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-08 17:46:14.154
+!MESSAGE Indexed '4_gpio_input' (3 sources, 53 headers) in 0.225 sec: 1,949 declarations; 2,836 references; 1 unresolved inclusions; 1 syntax errors; 18 unresolved names (0.37%)
+!SESSION 2024-05-08 18:04:00.905 -----------------------------------------------
+eclipse.buildId=Version 1.12.1
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-05-08 18:04:05.965
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-05-08 18:04:05.966
+!MESSAGE Log4j2 initialized with config file /home/michael/Embedded/BareMetalBase/8_uart_rx/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-05-08 18:04:09.257
+!MESSAGE Started RMI Server, listening on port 41337

@@ -8,3 +8,8 @@
 1715115147785	Delete resource '7_uart_modular/7_uart_modular.launch'
 1715115921953	Delete resource '8_uart_rx/Debug'
 1715115929580	Delete resource '8_uart_rx/7_uart_modular.launch'
+1715291621212	Delete resource '9_adc/8_uart_rx Debug.launch'
+1715291652329	Delete resource '9_adc/Debug'
+1715292487410	Delete resource '9_adc/Debug'
+1715292495302	Delete resource '9_adc/9_adc.launch'
+1715292509796	Rename resource '9_adc'
