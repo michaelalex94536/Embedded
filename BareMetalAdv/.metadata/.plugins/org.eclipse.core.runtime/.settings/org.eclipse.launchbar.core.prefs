@@ -9,5 +9,6 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:10_UART_DMA/activeLaunchTarget=
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:2_WorkingWithITM/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:2_WorkingWithITM/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:411_uart_dma/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:411_uart_dma/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:7_DMA_MEM2MEM/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:7_DMA_MEM2MEM/activeLaunchTarget=null\:---

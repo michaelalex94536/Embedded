@@ -13,8 +13,4 @@
 			<item value="/home/michael/Embedded/BareMetalBase"/>
 		</list>
 	</section>
-	<section name="ChooseWorkspaceDialogSettings">
-		<item key="DIALOG_X_ORIGIN" value="409"/>
-		<item key="DIALOG_Y_ORIGIN" value="174"/>
-	</section>
 </section>
