@@ -1,0 +1,19 @@
+17:54:47 **** Incremental Build of configuration Debug for project 6_uart_printf ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -DSTM32F411xx -c -I../Inc -I/home/michael/Embedded/chip_headers/CMSIS/Include -I/home/michael/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -DSTM32F411xx -c -I../Inc -I/home/michael/Embedded/chip_headers/CMSIS/Include -I/home/michael/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -DSTM32F411xx -c -I../Inc -I/home/michael/Embedded/chip_headers/CMSIS/Include -I/home/michael/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "6_uart_printf.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/michael/Embedded/BareMetalBase/6_uart_printf/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="6_uart_printf.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 6_uart_printf.elf
+ 
+arm-none-eabi-size   6_uart_printf.elf 
+arm-none-eabi-objdump -h -S  6_uart_printf.elf  > "6_uart_printf.list"
+   text	   data	    bss	    dec	    hex	filename
+   5532	    108	   1588	   7228	   1c3c	6_uart_printf.elf
+Finished building: default.size.stdout
+ 
+Finished building: 6_uart_printf.list
+ 
+
+17:54:48 Build Finished. 0 errors, 0 warnings. (took 1s.280ms)
+

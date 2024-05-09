@@ -39,11 +39,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_line   000000e4  00000000  00000000  00010f85  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00002f63  00000000  00000000  00011069  2**0
+ 18 .debug_str    00002f53  00000000  00000000  00011069  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000050  00000000  00000000  00013fcc  2**0
+ 19 .comment      00000050  00000000  00000000  00013fbc  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00000058  00000000  00000000  0001401c  2**2
+ 20 .debug_frame  00000058  00000000  00000000  0001400c  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -94,7 +94,7 @@ int main(void)
  80001e4:	f043 0301 	orr.w	r3, r3, #1
  80001e8:	6013      	str	r3, [r2, #0]
 
-	// Set PA5 as an output pin, which requires settings two bits
+	// Set PA5 as an output pin, which requires setting bits 10 and 11
 	GPIOA_MODE_R &= ~(1U << 11); // Set bit 11 to 0
  80001ea:	4b0f      	ldr	r3, [pc, #60]	; (8000228 <main+0x50>)
  80001ec:	681b      	ldr	r3, [r3, #0]
@@ -111,7 +111,7 @@ int main(void)
 	// Set ODR to one to turn on the LED
 	//	GPIOA_OD_R |= PIN5;
 
-	// Toggle LED
+	// Toggle LED by alternating the ODR value
 		GPIOA_OD_R ^= PIN5;
  8000202:	4b0a      	ldr	r3, [pc, #40]	; (800022c <main+0x54>)
  8000204:	681b      	ldr	r3, [r3, #0]

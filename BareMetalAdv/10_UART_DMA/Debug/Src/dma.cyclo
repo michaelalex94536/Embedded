@@ -1,0 +1,3 @@
+core_cm4.h:1684:22:__NVIC_EnableIRQ	2
+dma.c:20:6:dma2_mem2mem_config	2
+dma.c:69:6:dma_transfer_start	1

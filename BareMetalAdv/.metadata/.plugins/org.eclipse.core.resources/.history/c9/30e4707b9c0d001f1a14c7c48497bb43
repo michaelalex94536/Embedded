@@ -1,0 +1,10 @@
+/home/michael/Embedded/BareMetalAdv/10_UART_DMA/chip_headers/CMSIS/Include/core_cm4.h:1684:22:__NVIC_EnableIRQ	16	static,ignoring_inline_asm
+../Src/uart_dma.c:62:6:uart2_rx_tx_init	8	static
+../Src/uart_dma.c:114:6:dma1_init	8	static
+../Src/uart_dma.c:124:6:dma1_stream5_uart_rx_config	8	static
+../Src/uart_dma.c:173:6:dma1_stream6_uart_tx_config	16	static
+../Src/uart_dma.c:217:17:compute_uart_bd	16	static
+../Src/uart_dma.c:223:13:uart_set_baudrate	16	static
+../Src/uart_dma.c:229:6:DMA1_Stream6_IRQHandler	4	static
+../Src/uart_dma.c:242:6:DMA1_Stream5_IRQHandler	4	static
+../Src/uart_dma.c:256:6:USART2_IRQHandler	4	static

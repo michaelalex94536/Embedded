@@ -59,8 +59,8 @@ all: main-build
 main-build: 2_gpio_output.elf secondary-outputs
 
 # Tool invocations
-2_gpio_output.elf 2_gpio_output.map: $(OBJS) $(USER_OBJS) /home/michael/Documents/Udemy/Embedded/BareMetalBase/2_gpio_output/STM32F411RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "2_gpio_output.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/michael/Documents/Udemy/Embedded/BareMetalBase/2_gpio_output/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_gpio_output.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+2_gpio_output.elf 2_gpio_output.map: $(OBJS) $(USER_OBJS) /home/michael/Embedded/BareMetalBase/2_gpio_output/STM32F411RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "2_gpio_output.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/michael/Embedded/BareMetalBase/2_gpio_output/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_gpio_output.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

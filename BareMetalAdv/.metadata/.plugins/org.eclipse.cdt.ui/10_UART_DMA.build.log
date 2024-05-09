@@ -1,0 +1,12 @@
+18:20:34 **** Incremental Build of configuration Debug for project 10_UART_DMA ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I/home/michael/Documents/UdemyEtc/AdvancedBareMetal/0_Test/chip_headers/CMSIS/Include -I/home/michael/Documents/UdemyEtc/AdvancedBareMetal/0_Test/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:4:10: fatal error: stm32f4xx.h: No such file or directory
+    4 | #include "stm32f4xx.h"
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:39: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+18:20:35 Build Failed. 2 errors, 0 warnings. (took 1s.136ms)
+

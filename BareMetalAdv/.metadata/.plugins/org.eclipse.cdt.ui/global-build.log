@@ -1,0 +1,49 @@
+20:42:04 **** Build of configuration Debug for project 411_uart_dma ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411retx.d" -MT"Startup/startup_stm32f411retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f411retx.o" "../Startup/startup_stm32f411retx.s"
+arm-none-eabi-gcc "../Src/adc_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F446xx -c -I../Inc -I/home/michael/Embedded/BareMetalAdv/chip_headers/CMSIS/Include -I/home/michael/Embedded/BareMetalAdv/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/adc_dma.d" -MT"Src/adc_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc_dma.o"
+arm-none-eabi-gcc "../Src/dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F446xx -c -I../Inc -I/home/michael/Embedded/BareMetalAdv/chip_headers/CMSIS/Include -I/home/michael/Embedded/BareMetalAdv/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/dma.d" -MT"Src/dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/dma.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F446xx -c -I../Inc -I/home/michael/Embedded/BareMetalAdv/chip_headers/CMSIS/Include -I/home/michael/Embedded/BareMetalAdv/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F446xx -c -I../Inc -I/home/michael/Embedded/BareMetalAdv/chip_headers/CMSIS/Include -I/home/michael/Embedded/BareMetalAdv/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F446xx -c -I../Inc -I/home/michael/Embedded/BareMetalAdv/chip_headers/CMSIS/Include -I/home/michael/Embedded/BareMetalAdv/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F446xx -c -I../Inc -I/home/michael/Embedded/BareMetalAdv/chip_headers/CMSIS/Include -I/home/michael/Embedded/BareMetalAdv/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+arm-none-eabi-gcc "../Src/uart_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F446xx -c -I../Inc -I/home/michael/Embedded/BareMetalAdv/chip_headers/CMSIS/Include -I/home/michael/Embedded/BareMetalAdv/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart_dma.d" -MT"Src/uart_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart_dma.o"
+arm-none-eabi-gcc -o "411_uart_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/michael/Embedded/BareMetalAdv/411_uart_dma/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="411_uart_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 411_uart_dma.elf
+ 
+arm-none-eabi-size   411_uart_dma.elf 
+arm-none-eabi-objdump -h -S  411_uart_dma.elf  > "411_uart_dma.list"
+   text	   data	    bss	    dec	    hex	filename
+   4416	    108	   1716	   6240	   1860	411_uart_dma.elf
+Finished building: default.size.stdout
+ 
+Finished building: 411_uart_dma.list
+ 
+20:42:49 **** Incremental Build of configuration Debug for project 411_uart_dma ****
+make -j8 all 
+arm-none-eabi-size   411_uart_dma.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4416	    108	   1716	   6240	   1860	411_uart_dma.elf
+Finished building: default.size.stdout
+ 
+20:45:45 **** Incremental Build of configuration Debug for project 411_uart_dma ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F446xx -c -I../Inc -I/home/michael/Embedded/BareMetalAdv/chip_headers/CMSIS/Include -I/home/michael/Embedded/BareMetalAdv/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "411_uart_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/michael/Embedded/BareMetalAdv/411_uart_dma/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="411_uart_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 411_uart_dma.elf
+ 
+arm-none-eabi-size   411_uart_dma.elf 
+arm-none-eabi-objdump -h -S  411_uart_dma.elf  > "411_uart_dma.list"
+   text	   data	    bss	    dec	    hex	filename
+   4416	    108	   1716	   6240	   1860	411_uart_dma.elf
+Finished building: default.size.stdout
+ 
+Finished building: 411_uart_dma.list
+ 
+20:46:34 **** Incremental Build of configuration Debug for project 411_uart_dma ****
+make -j8 all 
+arm-none-eabi-size   411_uart_dma.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4416	    108	   1716	   6240	   1860	411_uart_dma.elf
+Finished building: default.size.stdout
+ 

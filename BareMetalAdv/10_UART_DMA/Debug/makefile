@@ -59,8 +59,8 @@ all: main-build
 main-build: 10_UART_DMA.elf secondary-outputs
 
 # Tool invocations
-10_UART_DMA.elf 10_UART_DMA.map: $(OBJS) $(USER_OBJS) /home/michael/Documents/UdemyEtc/AdvancedBareMetal/10_UART_DMA/STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "10_UART_DMA.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/michael/Documents/UdemyEtc/AdvancedBareMetal/10_UART_DMA/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="10_UART_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+10_UART_DMA.elf 10_UART_DMA.map: $(OBJS) $(USER_OBJS) /home/michael/Embedded/BareMetalAdv/10_UART_DMA/STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "10_UART_DMA.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/michael/Embedded/BareMetalAdv/10_UART_DMA/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="10_UART_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

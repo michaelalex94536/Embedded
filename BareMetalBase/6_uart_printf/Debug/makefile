@@ -59,8 +59,8 @@ all: main-build
 main-build: 6_uart_printf.elf secondary-outputs
 
 # Tool invocations
-6_uart_printf.elf 6_uart_printf.map: $(OBJS) $(USER_OBJS) /home/michael/Documents/Udemy/Embedded/BareMetalBase/6_uart_printf/STM32F411RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "6_uart_printf.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/michael/Documents/Udemy/Embedded/BareMetalBase/6_uart_printf/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="6_uart_printf.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+6_uart_printf.elf 6_uart_printf.map: $(OBJS) $(USER_OBJS) /home/michael/Embedded/BareMetalBase/6_uart_printf/STM32F411RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "6_uart_printf.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/michael/Embedded/BareMetalBase/6_uart_printf/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="6_uart_printf.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

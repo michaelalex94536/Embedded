@@ -1,0 +1,3 @@
+/home/michael/Embedded/BareMetalAdv/chip_headers/CMSIS/Include/core_cm4.h:1684:22:__NVIC_EnableIRQ	16	static,ignoring_inline_asm
+../Src/dma.c:11:6:dma2_mem2mem_config	8	static
+../Src/dma.c:61:6:dma_transfer_start	24	static
