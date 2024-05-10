@@ -13,3 +13,6 @@
 1715292487410	Delete resource '9_adc/Debug'
 1715292495302	Delete resource '9_adc/9_adc.launch'
 1715292509796	Rename resource '9_adc'
+1715294244156	Delete resource '10_adc_cont/Debug'
+1715294251549	Delete resource '10_adc_cont/9_adc_single.launch'
+1715294259951	Delete resource '10_adc_cont/10_adc_cont Debug.launch'

@@ -20,6 +20,8 @@
 #define CR2_SWSTART		(1U << 30)
 #define SR_EOC			(1U << 1)
 
+#define ADC_CR2_ALIGN	(1U << 11)
+
 
 
 void adc1_pa1_init(void)
@@ -38,6 +40,14 @@ void adc1_pa1_init(void)
 	RCC->APB2ENR |= ADC1EN;
 
 	/************    Configure the ADC parameters    **************/
+	// Set the ADC resolution: bits 25:24 of ADC_CR1. 0b00=12-bit, 0b01=10-bit, 0b10=8-bit, 0b11=6-bit
+	ADC1->CR1 &= ~(1U << 25);
+	ADC1->CR1 &= ~(1U << 24);
+
+	// Right-justify the ADC data
+	ADC1->CR2 &= ~ADC_CR2_ALIGN;
+
+
 	// Configure conversion sequence start. Bits 4:0 of ADC_SQR3 -> 0b00001 (ADC channel 1)
 	ADC1->SQR3 &= ~(1U << 4);
 	ADC1->SQR3 &= ~(1U << 3);

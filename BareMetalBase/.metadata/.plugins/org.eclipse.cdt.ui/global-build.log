@@ -1,67 +1,10 @@
-14:57:53 **** Incremental Build of configuration Debug for project 9_adc ****
-make -j8 all 
-arm-none-eabi-size   9_adc.elf 
-   text	   data	    bss	    dec	    hex	filename
-   5780	    108	   1588	   7476	   1d34	9_adc.elf
-Finished building: default.size.stdout
+15:36:27 **** Clean-only build of configuration Debug for project 10_adc_cont ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32f411retx.d ./Startup/startup_stm32f411retx.o
+rm -rf ./Src/adc.cyclo ./Src/adc.d ./Src/adc.o ./Src/adc.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/uart.cyclo ./Src/uart.d ./Src/uart.o ./Src/uart.su
+rm -rf 10_adc_cont.elf 10_adc_cont.list 10_adc_cont.map default.size.stdout
  
-14:58:26 **** Incremental Build of configuration Debug for project 9_adc ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Embedded/chip_headers/CMSIS/Include -I/home/michael/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "9_adc.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/michael/Embedded/BareMetalBase/9_adc/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="9_adc.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 9_adc.elf
- 
-arm-none-eabi-size   9_adc.elf 
-arm-none-eabi-objdump -h -S  9_adc.elf  > "9_adc.list"
-   text	   data	    bss	    dec	    hex	filename
-   5780	    108	   1588	   7476	   1d34	9_adc.elf
-Finished building: default.size.stdout
- 
-Finished building: 9_adc.list
- 
-14:59:56 **** Incremental Build of configuration Debug for project 9_adc ****
-make -j8 all 
-arm-none-eabi-size   9_adc.elf 
-   text	   data	    bss	    dec	    hex	filename
-   5780	    108	   1588	   7476	   1d34	9_adc.elf
-Finished building: default.size.stdout
- 
-15:00:15 **** Incremental Build of configuration Debug for project 9_adc ****
-make -j8 all 
-arm-none-eabi-size   9_adc.elf 
-   text	   data	    bss	    dec	    hex	filename
-   5780	    108	   1588	   7476	   1d34	9_adc.elf
-Finished building: default.size.stdout
- 
-15:02:11 **** Incremental Build of configuration Debug for project 9_adc ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Embedded/chip_headers/CMSIS/Include -I/home/michael/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "9_adc.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/michael/Embedded/BareMetalBase/9_adc/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="9_adc.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 9_adc.elf
- 
-arm-none-eabi-size   9_adc.elf 
-arm-none-eabi-objdump -h -S  9_adc.elf  > "9_adc.list"
-   text	   data	    bss	    dec	    hex	filename
-   5780	    108	   1588	   7476	   1d34	9_adc.elf
-Finished building: default.size.stdout
- 
-Finished building: 9_adc.list
- 
-15:06:12 **** Incremental Build of configuration Debug for project 9_adc ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Embedded/chip_headers/CMSIS/Include -I/home/michael/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
-arm-none-eabi-gcc -o "9_adc.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/michael/Embedded/BareMetalBase/9_adc/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="9_adc.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 9_adc.elf
- 
-arm-none-eabi-size   9_adc.elf 
-arm-none-eabi-objdump -h -S  9_adc.elf  > "9_adc.list"
-   text	   data	    bss	    dec	    hex	filename
-   5780	    108	   1588	   7476	   1d34	9_adc.elf
-Finished building: default.size.stdout
- 
-Finished building: 9_adc.list
- 
-15:09:15 **** Build of configuration Debug for project 9_adc_single ****
+15:36:46 **** Build of configuration Debug for project 10_adc_cont ****
 make -j8 all 
 arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411retx.d" -MT"Startup/startup_stm32f411retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f411retx.o" "../Startup/startup_stm32f411retx.s"
 arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Embedded/chip_headers/CMSIS/Include -I/home/michael/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
@@ -69,28 +12,40 @@ arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLE
 arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Embedded/chip_headers/CMSIS/Include -I/home/michael/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
 arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Embedded/chip_headers/CMSIS/Include -I/home/michael/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
 arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Embedded/chip_headers/CMSIS/Include -I/home/michael/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
-arm-none-eabi-gcc -o "9_adc_single.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/michael/Embedded/BareMetalBase/9_adc_single/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="9_adc_single.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 9_adc_single.elf
+arm-none-eabi-gcc -o "10_adc_cont.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/michael/Embedded/BareMetalBase/10_adc_cont/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="10_adc_cont.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 10_adc_cont.elf
  
-arm-none-eabi-size   9_adc_single.elf 
-arm-none-eabi-objdump -h -S  9_adc_single.elf  > "9_adc_single.list"
+arm-none-eabi-size   10_adc_cont.elf 
+arm-none-eabi-objdump -h -S  10_adc_cont.elf  > "10_adc_cont.list"
    text	   data	    bss	    dec	    hex	filename
-   5780	    108	   1588	   7476	   1d34	9_adc_single.elf
+   5792	    108	   1588	   7488	   1d40	10_adc_cont.elf
 Finished building: default.size.stdout
  
-Finished building: 9_adc_single.list
+Finished building: 10_adc_cont.list
  
-15:09:24 **** Incremental Build of configuration Debug for project 9_adc_single ****
+15:37:54 **** Incremental Build of configuration Debug for project 10_adc_cont ****
 make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411retx.d" -MT"Startup/startup_stm32f411retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f411retx.o" "../Startup/startup_stm32f411retx.s"
+arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Embedded/chip_headers/CMSIS/Include -I/home/michael/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Embedded/chip_headers/CMSIS/Include -I/home/michael/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "9_adc_single.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/michael/Embedded/BareMetalBase/9_adc_single/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="9_adc_single.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 9_adc_single.elf
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Embedded/chip_headers/CMSIS/Include -I/home/michael/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Embedded/chip_headers/CMSIS/Include -I/home/michael/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I/home/michael/Embedded/chip_headers/CMSIS/Include -I/home/michael/Embedded/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+arm-none-eabi-gcc -o "10_adc_cont.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/michael/Embedded/BareMetalBase/10_adc_cont/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="10_adc_cont.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 10_adc_cont.elf
  
-arm-none-eabi-size   9_adc_single.elf 
-arm-none-eabi-objdump -h -S  9_adc_single.elf  > "9_adc_single.list"
+arm-none-eabi-size   10_adc_cont.elf 
+arm-none-eabi-objdump -h -S  10_adc_cont.elf  > "10_adc_cont.list"
    text	   data	    bss	    dec	    hex	filename
-   5780	    108	   1588	   7476	   1d34	9_adc_single.elf
+   5792	    108	   1588	   7488	   1d40	10_adc_cont.elf
 Finished building: default.size.stdout
  
-Finished building: 9_adc_single.list
+Finished building: 10_adc_cont.list
+ 
+15:38:08 **** Incremental Build of configuration Debug for project 10_adc_cont ****
+make -j8 all 
+arm-none-eabi-size   10_adc_cont.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5792	    108	   1588	   7488	   1d40	10_adc_cont.elf
+Finished building: default.size.stdout
  
