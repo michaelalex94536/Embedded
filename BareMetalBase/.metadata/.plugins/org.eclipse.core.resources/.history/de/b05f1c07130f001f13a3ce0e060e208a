@@ -10,14 +10,14 @@ ADC - single conversion for one channel only on ADC1 channel 1 - Pin PA1
 #include "adc.h"
 
 uint32_t sensor_value;
-uint8_t adc_resol = 8; //Valid choices: 4, 8, 10, 12-bits
+uint8_t resol = 12;
 
 int main(void)
 {
 
 	uart2_tx_init();
 
-	adc1_pa1_init(adc_resol);
+	adc1_pa1_init(resol);
 
 
 	while(1)

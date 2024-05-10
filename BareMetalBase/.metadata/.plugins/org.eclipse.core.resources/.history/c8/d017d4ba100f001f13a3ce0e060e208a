@@ -15,15 +15,16 @@
 #define ADC1EN			(1U << 8)
 #define GPIOAEN			(1U << 0)
 #define ADC_CH1			(1U << 0)
-#define ADC_SEQ_LEN		(0x00)
+#define ADC_SEQ_LEN		0x00
 #define CR2_ADON		(1U << 0)
 #define CR2_SWSTART		(1U << 30)
 #define SR_EOC			(1U << 1)
+
 #define ADC_CR2_ALIGN	(1U << 11)
 
 
 
-void adc1_pa1_init(uint8_t resol)
+void adc1_pa1_init(void)
 {
 	/************    Configure the ADC GPIOA pin    ***************/
 	// Enable clock access to GPIOA
@@ -40,34 +41,8 @@ void adc1_pa1_init(uint8_t resol)
 
 	/************    Configure the ADC parameters    **************/
 	// Set the ADC resolution: bits 25:24 of ADC_CR1. 0b00=12-bit, 0b01=10-bit, 0b10=8-bit, 0b11=6-bit
-	switch(resol)
-	{
-		case 12:
-			ADC1->CR1 &= ~(1U << 25);
-			ADC1->CR1 &= ~(1U << 24);
-			break;
-
-		case 10:
-			ADC1->CR1 &= ~(1U << 25);
-			ADC1->CR1 |= (1U << 24);
-			break;
-
-		case 8:
-			ADC1->CR1 &= ~(1U << 24);
-			ADC1->CR1 |= (1U << 25);
-			break;
-
-		case 6:
-			ADC1->CR1 |= (1U << 24);
-			ADC1->CR1 |= (1U << 25);
-			break;
-
-		default:
-			ADC1->CR1 &= ~(1U << 25);
-			ADC1->CR1 &= ~(1U << 24);
-	}
-
-
+	ADC1->CR1 &= ~(1U << 25);
+	ADC1->CR1 &= ~(1U << 24);
 
 	// Right-justify the ADC data
 	ADC1->CR2 &= ~ADC_CR2_ALIGN;
@@ -81,7 +56,7 @@ void adc1_pa1_init(uint8_t resol)
 	ADC1->SQR3 |= ADC_CH1;
 
 	// Conversion sequence length - Bits 23:20 of ADC_SQR1 -> 0b0000
-	// For 1 conversion used here, setting all bits of this register to 0 is OK
+	// For 1 conversion, setting all bits of this register to 0 is OK
 	ADC1->SQR1 = ADC_SEQ_LEN;
 
 	// Enable ADC module
