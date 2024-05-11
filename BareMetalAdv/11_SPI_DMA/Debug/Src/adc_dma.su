@@ -1,0 +1,2 @@
+/home/michael/Documents/UdemyEtc/AdvancedBareMetal/11_SPI_DMA/chip_headers/CMSIS/Include/core_cm4.h:1684:22:__NVIC_EnableIRQ	16	static,ignoring_inline_asm
+../Src/adc_dma.c:40:6:adc_tim_dma_init	8	static
